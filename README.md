@@ -20,5 +20,5 @@ color2.toHex(); // => or use .toString();
 ## Features for now:
 Possibility to invert colors
 ```javascript
-color1.invert.toString() // => "0FFF00"
+color1.invert().toString() // => "0FFF00"
 ```
