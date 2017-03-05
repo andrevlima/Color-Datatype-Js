@@ -31,4 +31,7 @@ If you can't find a color, you can register a new
 ```javascript
 Color.register("supercolor", "00f011");
 ```
-In case of another color with same name exists, it will subscribe this.
+If you want to **rewrite** a color use *unregister*
+```javascript
+Color.unregister("supercolor");
+```
