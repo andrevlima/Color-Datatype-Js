@@ -6,7 +6,8 @@ A Javascript "data type" that provides a quick access to control colors (with so
 // Possible input formats
 var color1 = new Color("F000FF");
 var color2 = new Color("255, 000, 200");
-var color3 = new Color([020, 010, 255]);
+var color3 = new Color([000, 000, 255]);
+var color3 = new Color("red");
 ```
 
 Possible outputs
@@ -21,4 +22,8 @@ color2.toHex(); // => or use .toString();
 Possibility to invert colors
 ```javascript
 color1.invert().toString() // => "0FFF00"
+```
+Try to find a friendly name for a color
+```javascript
+color3.find.friendlyName() // => "blue"
 ```
