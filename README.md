@@ -13,8 +13,8 @@ var color3 = new Color("red");
 Possible outputs
 ```javascript
 // Outputs
-color1.toRGB.toObj() // => { R: ..., G:..., B:... }
-color1.toRGB.toArray() // => [R..., G..., B...]
+color1.toRGB("object") // => { R: ..., G:..., B:... }
+color1.toRGB("array") // => (By default) [R..., G..., B...] 
 color2.toHex(); // => or use .toString();
 ```
 
@@ -25,5 +25,10 @@ color1.invert().toString() // => "0FFF00"
 ```
 Try to find a friendly name for a color
 ```javascript
-color3.find.friendlyName() // => "blue"
+color3.friendlyName() // => "blue"
 ```
+If you can't find a color, you can register a new
+```javascript
+Color.register("supercolor", "00f011");
+```
+In case of another color with same name exists, it will subscribe this.
