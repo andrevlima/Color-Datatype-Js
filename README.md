@@ -27,6 +27,10 @@ Try to find a friendly name for a color
 ```javascript
 color3.friendlyName() // => "blue"
 ```
+Get the contrast color (Black or white)
+```javascript
+color3.blackWhiteContrast() // => "ffffff"
+```
 If you can't find a color, you can register a new
 ```javascript
 Color.register("supercolor", "00f011");

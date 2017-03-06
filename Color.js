@@ -6,6 +6,9 @@
 
 //NOTE: It's not a compiled version from TS
 var Color = (function () {
+    var max_color =     parseInt("ffffff", 16);
+    var middle_color =  Math.ceil(max_color / 2);
+
     function Color(color) {
         function extractHexFromArr(colorArr) {
             var hex = "";
@@ -41,7 +44,6 @@ var Color = (function () {
 
     function invertColor(hex) {
         var color = parseInt(hex, 16);
-        var max_color = parseInt("ffffff", 16);
         var inverted = (color - max_color) * -1;
         var new_hex = inverted.toString(16);
         return "0".repeat(6 - (new_hex.length > 6 ? 0 : new_hex.length)) + new_hex;
@@ -71,6 +73,9 @@ var Color = (function () {
     };
 	Color.prototype.toString = function () {
         return this.toHex();
+    };
+    Color.prototype.blackWhiteContrast = function () {
+        return this.color > middle_color ? "000000" : "ffffff";
     };
     Color.prototype.friendlyName = function(){
         var hex =  this.toHex();
